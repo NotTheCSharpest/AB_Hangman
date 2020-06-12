@@ -32,6 +32,7 @@ namespace Hangman
         {
             while ((!chancesLeft = 0) & (revealedWord.Contains(*)))
             {
+                // call drawScreen
                 Console.WriteLine("Bitte ihre Vermutung eintyppen");
                 char currGuess = Char.ToLower(Console.ReadLine());
                 // invalid input
@@ -65,13 +66,13 @@ namespace Hangman
                            //call game-end condition
                             if (!revealedWord.Contains(*)
                                 {
-                                //clear console somehow
+                                Console.Clear();
                                 Console.WriteLine("Sie haben gewonnen!");
                                 }
                                 
                             elseif (chancesLeft = 0)
                                 {
-                                //clear console somehow
+                                Console.Clear();
                                 Console.WriteLine("Sie haben verlieren");
                                 }
                             else
@@ -95,11 +96,15 @@ namespace Hangman
     
         public void drawScreen():
         {
+            Console.Clear();
+            
             /*
             1. Clear Screen
-            2. Redraw Screen /w revealedWord, prompt, and Hangman
+            2. Redraw Screen /w revealedWord (with formatting), prompt, and Hangman
             http://www.berkeleyinternet.com/perl/node30.html
-            */
+            https://docs.microsoft.com/en-us/dotnet/api/system.console.clear?view=netcore-3.1
+            https://docs.microsoft.com/en-us/dotnet/api/system.drawing.graphics.clear?view=dotnet-plat-ext-3.1
+         */
         //ends drawScreen function
         }
 
