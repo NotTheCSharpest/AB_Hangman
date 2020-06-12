@@ -14,7 +14,17 @@ Mach einfach Hangman als Kommandozeilspiele
   E. Loop
 3. win/lose -> display appropriate message
 
-## Program-Flow
+## New Program Flow
+1. print greeting/etc. 
+2. Call gameState.gameStart()
+(game runs)
+    a. gets input for hidden thing
+    b. runs game properly
+    c. exits naturally as part of loop
+
+
+
+## OLD Program-Flow
 1. Instantiate variables (string hiddenWord, list revealedWord, list Guesses)
 2. Print Greeting
 3. Loopy time
