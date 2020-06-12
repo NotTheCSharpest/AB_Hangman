@@ -1,19 +1,37 @@
-/*
-Aufgabe:
-Mach einfach Hangman als Kommandozeilspiele
 
-User-flow
-1. Gruße drucken
-2. Schliefe:
-  A. show obscured word
-  B. take input
-  C. check input against word (hidden)
-  D. update game state
-  E. Loop
-3.
+// declaring our data objects to hold state during the game  
+string hiddenWord = "Donaudampfschiff"
+List<char> revealedWord = new List<char>();
+List<char> guesses = new List<char>();
 
-*/
+// functions
+
+// create function to set up ano(check syntax)
+def createRevealed():
+    int i = hiddenWord.Length();
+    int c = 0;
+    while c < i
+        revealedWord.Add(*);
+
 
 Console.WriteLine("This is a random greeting");
-string hiddenWord = "Donaudampfschiff"
-# 
+
+/*
+Function to build our variables
+from https://www.learncs.org/en/Lists#:~:text=Lists%20in%20C%23%20are%20very,defined%20using%20the%20generic%20syntax.
+List<int> numbers = new List<int>();
+
+Pseudocode:
+#create list
+List<char> revealedWord = new List<char>();
+numbers.Add(1);
+numbers.Add(2);
+#revealedWord needs to start out with a number of * = to length of word
+
+#create function (check syntax)
+def createRevealed():
+    int i = hiddenWord.Length();
+    int c = 0;
+    while c < i
+        revealedWord.Add(*);
+*/
