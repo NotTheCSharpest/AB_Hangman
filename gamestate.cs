@@ -6,7 +6,8 @@ namespace Hangman
     public class GameState
     {
         // create state-holding variables for our object
-        private string hiddenWord;
+        private string eingabe;
+        private string hiddenWord = eingabe.ToLower();
         private list revealedWord;
         private string guesses;
         private int chancesLeft = 6;
@@ -18,7 +19,8 @@ namespace Hangman
         public void createHW()
         {
             Console.WriteLine("Bitte Ihre Geheimwort eintyppen");
-            hiddenWord = Console.Readline();
+            eingabe = Console.Readline();
+            
             for (int i = 0; i < hiddenWord.Length; i++)
             {
                 revealedWord.Add('*');
@@ -26,37 +28,53 @@ namespace Hangman
         }
         
         // our core gameplay, take guess as input and work through possibilities
-        public void guess();
+        public void gameStart();
         {
-            Console.WriteLine("Bitte ihre Vermutung eintyppen");
-            char currGuess = Char.ToLower(Console.ReadLine());
-            // invalid input
-            while (!char.IsLetter(currGuess)
-                {
-                Console.WriteLine("Eingabe Fehler");
+            while ((!chancesLeft = 0) & (revealedWord.Contains(*)))
+            {
                 Console.WriteLine("Bitte ihre Vermutung eintyppen");
                 char currGuess = Char.ToLower(Console.ReadLine());
-                }
-     
-            // guess has already been made
-            if (guesses.Contains(currGuess))
-                   {
-                   Console.WriteLine("Bitte ihre Vermutung eintyppen");
-                   char currGuess = Char.ToLower(Console.ReadLine());
-                   }
+                // invalid input
+                if (!char.IsLetter(currGuess)
+                    {
+                    Console.WriteLine("Eingabe Fehler");
+                    continue;
+                    //Console.WriteLine("Bitte ihre Vermutung eintyppen");
+                    //char currGuess = Char.ToLower(Console.ReadLine());
+                    }
 
-            // guess is a valid new character (gamestate)
-            if (hiddenWord.Contains(currGuess))
-                   {
-                   // update revealedWord
-                   }
-            else
-                   {
-                   // update hangman, chancesLeft = -1
-                   }
-            // check if game ends and call gameEnd
+                // guess has already been made
+                else if (guesses.Contains(currGuess))
+                       {
+                       Console.WriteLine("Sie haben das schon probiert!");
+                       continue;
+                       //char currGuess = Char.ToLower(Console.ReadLine());
+                       }
+
+                // guess is a valid new character (gamestate)
+                else if (hiddenWord.Contains(currGuess))
+                       {
+                       // update revealedWord from asterix to letter
+                           for (int i = 0; while i > hiddenWord.Length; i++)
+                           {
+                               if (hiddenWord[i] = currGuess)
+                               {
+                               revealedword[i] = currGuess
+                               }
+                           }
+                           continue;
+                           
+                       }
+                else if (!hiddenWord.Contains(currGuess))
+                       {
+                       // update hangman, chancesLeft = -1
+                           chancesLeft = chancesLeft-1;
+                       }
+            //ends while loop
+            }
+        // game end loop
+           
         }
-        
         public void gameEnd();
         {
             //if chancesLeft > 0 -> do winning thing
