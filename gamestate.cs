@@ -56,7 +56,7 @@ namespace Hangman
                 else if (hiddenWord.Contains(currGuess))
                        {
                        // update revealedWord from asterix to letter
-                           for (int i = 0; while i > hiddenWord.Length; i++)
+                           for (int i = 0; while i < hiddenWord.Length; i++)
                            {
                                if (hiddenWord[i] = currGuess)
                                {
