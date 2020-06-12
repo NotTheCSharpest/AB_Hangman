@@ -69,18 +69,25 @@ namespace Hangman
                        {
                        // update hangman, chancesLeft = -1
                            chancesLeft = chancesLeft-1;
+                           continue;
                        }
             //ends while loop
             }
+        //insert game ending loop here
+        
         // game end loop
            
         }
-        public void gameEnd();
+    
+        public void drawScreen():
         {
-            //if chancesLeft > 0 -> do winning thing
-            //else ->> do losing thing
+            /*
+            1. Clear Screen
+            2. Redraw Screen /w revealedWord, prompt, and Hangman
+            http://www.berkeleyinternet.com/perl/node30.html
+            */
+        //ends drawScreen function
         }
-        
 
       
     // end class  
