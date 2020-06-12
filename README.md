@@ -18,8 +18,8 @@ Mach einfach Hangman als Kommandozeilspiele
 1. print greeting/etc. 
 2. Call gameState.gameStart()
 (game runs)
-    a. gets input for hidden thing
-    b. runs game properly
+    a. gets input for hidden thing with gameState.createHW()
+    b. runs game properly gameState.Start()
     c. exits naturally as part of loop
 
 
