@@ -28,9 +28,33 @@ namespace Hangman
         // our core gameplay, take guess as input and work through possibilities
         public void guess();
         {
+            Console.WriteLine("Bitte ihre Vermutung eintyppen");
+            char currGuess = Char.ToLower(Console.ReadLine());
             // invalid input
+            while (!char.IsLetter(currGuess)
+                {
+                Console.WriteLine("Eingabe Fehler");
+                Console.WriteLine("Bitte ihre Vermutung eintyppen");
+                char currGuess = Char.ToLower(Console.ReadLine());
+                }
+     
             // guess has already been made
-            // guess is a new character (gamestate)
+            if (guesses.Contains(currGuess))
+                   {
+                   Console.WriteLine("Bitte ihre Vermutung eintyppen");
+                   char currGuess = Char.ToLower(Console.ReadLine());
+                   }
+
+            // guess is a valid new character (gamestate)
+            if (hiddenWord.Contains(currGuess))
+                   {
+                   // update revealedWord
+                   }
+            else
+                   {
+                   // update hangman, chancesLeft = -1
+                   }
+            // check if game ends and call gameEnd
         }
         
         public void gameEnd();
