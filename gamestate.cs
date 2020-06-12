@@ -8,7 +8,7 @@ namespace Hangman
         // create state-holding variables for our object
         private string eingabe;
         private string hiddenWord = eingabe.ToLower();
-        private list revealedWord;
+        private List<char> revealedWord = new List<char>();
         private string guesses;
         private int chancesLeft = 6;
         
@@ -62,7 +62,22 @@ namespace Hangman
                                revealedword[i] = currGuess
                                }
                            }
-                           continue;
+                           //call game-end condition
+                            if (!revealedWord.Contains(*)
+                                {
+                                //clear console somehow
+                                Console.WriteLine("Sie haben gewonnen!");
+                                }
+                                
+                            elseif (chancesLeft = 0)
+                                {
+                                //clear console somehow
+                                Console.WriteLine("Sie haben verlieren");
+                                }
+                            else
+                                {
+                                    continue;
+                                }
                            
                        }
                 else if (!hiddenWord.Contains(currGuess))
@@ -73,8 +88,7 @@ namespace Hangman
                        }
             //ends while loop
             }
-        //insert game ending loop here
-        
+
         // game end loop
            
         }
@@ -90,7 +104,7 @@ namespace Hangman
         }
 
       
-    // end class  
+    // end gameState class  
     }    
 // end namespace
 }
