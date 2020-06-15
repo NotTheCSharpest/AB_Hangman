@@ -1,4 +1,23 @@
+using System;
+namespace Hangman
 
+{
+
+
+    class Program
+    {
+    // print greeting
+    Console.WriteLine("Herzlich Wilkommen bei Hangman");
+    // start game (create hidden word, etc.)
+    GameState.createHW();
+    // Start the actual game loop
+    GameState.gameStart();
+    }
+   
+    
+}
+
+/* all of this is now outdated, left for reference only
 // declaring our data objects to hold state during the game  
 string hiddenWord = "Donaudampfschiff"
 List<char> revealedWord = new List<char>();
